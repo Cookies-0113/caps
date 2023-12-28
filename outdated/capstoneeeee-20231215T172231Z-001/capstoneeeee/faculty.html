@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faculty Page</title>
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+        <header>
+            <div class="close-btn">
+                <i class="bx bx-window-close"></i>
+            </div>
+
+            <a href="admin.html">
+            <img src="img/cvsu.png" align="">
+            <h1>Class Time Table</h1></a>
+        </header>
+
+        <div class="menu">
+            <div class="item"><a class="sub-btn"><i class="bx bxs-dashboard"></i>Dashboard
+            </a>
+            </div>
+            <div class="item"><a class="sub-btn"><i class="bx bxs-building"></i>Buildings
+            <i class="bx bx-chevron-right"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="" class="sub-item">Building 1</a>
+                <a href="" class="sub-item">Building 2</a>
+                <a href="" class="sub-item">Building 3</a>
+            </div>
+            </div>
+            <div class="item"><a href="index1.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></div>
+        </div>
+    </div>
+
+    
+    <div class="main_content">
+        <div class="header">
+            <ul>
+           <a href=""><h5>Faculty</h5>
+            <img src="img/admin.svg"></a>
+            <ul class="dropdown">
+                <li><a href="logout"></a></li>
+            </ul>
+        </ul>
+        </div>  
+        <div class="info">
+          <div>
+              <h1>Time Table</h1>
+          </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //for closing menu
+            $('.menu-btn').click(function(){
+                $('.side-bar').addClass('active');
+                $('.menu-btn').css("visibility","hidden");
+            }); 
+            //for opening menu
+            $('.close-btn').click(function(){
+                $('.side-bar').removeClass('active');
+                $('.menu-btn').css("visibility","visible");
+            }); 
+
+            //for other menu
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.bx-chevron-right').toggleClass('rotate');
+            });
+
+
+        })
+    </script>
+
+</body>
+</html>
+
